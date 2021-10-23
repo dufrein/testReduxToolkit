@@ -50,7 +50,7 @@ function App() {
   return (
     <Router>
       <Provider store={store}>
-        <div className="App">
+        <div className="layout">
           <Context.Provider value={{ isLogged }}>
             <header className="App-header">
               {Object.values(links).map((link) => (
@@ -62,20 +62,19 @@ function App() {
                 Logout
               </div>
             </header>
-            <div className="layout">
-              <Switch>
-                <ProtectedRoute path={links.page1}>
-                  <Page1 />
-                </ProtectedRoute>
-                <ProtectedRoute path={links.page2}>
-                  <Page2 />
-                </ProtectedRoute>
-                <Route path={links.loginPage}>
-                  <LoginPage logIn={logIn} />
-                </Route>
-                <Redirect exact to={links.loginPage} />
-              </Switch>
-            </div>
+
+            <Switch>
+              <ProtectedRoute path={links.page1}>
+                <Page1 />
+              </ProtectedRoute>
+              <ProtectedRoute path={links.page2}>
+                <Page2 />
+              </ProtectedRoute>
+              <Route path={links.loginPage}>
+                <LoginPage logIn={logIn} />
+              </Route>
+              <Redirect exact to={links.loginPage} />
+            </Switch>
           </Context.Provider>
         </div>
       </Provider>

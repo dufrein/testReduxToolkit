@@ -16,22 +16,15 @@ const Page1: React.FC<IProps> = ({ url, isLoading, fetchDog }) => {
   };
   return (
     <div
+      className="pageWrapper"
       style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: "#55dd99",
-        fontSize: "30px",
+        padding: "50px",
       }}
     >
-      Page1
       <div
         style={{
-          padding: "20px",
+          padding: "10px",
           margin: "20px",
           border: "1px solid #ff0",
           borderRadius: "2px",
@@ -43,14 +36,14 @@ const Page1: React.FC<IProps> = ({ url, isLoading, fetchDog }) => {
       </div>
       {url && !isLoading ? (
         <img
-          style={{ maxWidth: "500px", maxHeight: "500px" }}
+          style={{ maxWidth: "500px", maxHeight: "400px" }}
           alt="пёсель"
           src={url}
         ></img>
       ) : isLoading ? (
-        <div>Loading</div>
+        <div style={{ textAlign: "center" }}>Loading</div>
       ) : (
-        <div>:(</div>
+        <div style={{ textAlign: "center" }}>:(</div>
       )}
     </div>
   );

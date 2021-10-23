@@ -1,51 +1,67 @@
- .App-header {
-   height: 100px;
-   width: 100%;
-   position: fixed;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: #224385;
-   color: #fff;
- }
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
- .App-header a {
-   color: #fff;
-   margin: 0 20px;
-   text-decoration: none;
- }
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  padding-top: 60px;
+}
 
- .layout {
-   position: relative;
-   top: 100px;
-   width: 100%;
-   min-height: calc(100vh - 100px);
-   height: 1px;
-   display: flex;
-   flex-direction: column;
- }
+.App-header {
+  height: 60px;
+  width: 100%;
+  top: 0px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #224385;
+  color: #fff;
+  z-index: 1;
+}
 
- .loginButton {
-   width: 100px;
-   height: 50px;
-   font-size: 20px;
-   background-color: coral;
-   color: black;
-   border: 1px solid #ddd;
-   border-radius: 5px;
-   margin: 50px 0;
-   cursor: pointer;
- }
+.App-header a {
+  color: #fff;
+  margin: 0 20px;
+  text-decoration: none;
+}
 
- .logout {
-   width: 100px;
-   height: 40px;
-   line-height: 40px;
-   font-weight: bold;
-   cursor: pointer;
-   color: #000;
-   border: 1px solid #000;
-   margin: 0 50px;
-   text-align: center;
-   background-color: #ff3311;
- }
+.loginButton {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  background-color: coral;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 50px 0;
+  cursor: pointer;
+}
+
+.logout {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 50px;
+  text-align: center;
+  background-color: #ff3311;
+}
+
+.pageWrapper {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: aqua;
+}
