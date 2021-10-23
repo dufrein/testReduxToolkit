@@ -1,0 +1,51 @@
+ .App-header {
+   height: 100px;
+   width: 100%;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #224385;
+   color: #fff;
+ }
+
+ .App-header a {
+   color: #fff;
+   margin: 0 20px;
+   text-decoration: none;
+ }
+
+ .layout {
+   position: relative;
+   top: 100px;
+   width: 100%;
+   min-height: calc(100vh - 100px);
+   height: 1px;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .loginButton {
+   width: 100px;
+   height: 50px;
+   font-size: 20px;
+   background-color: coral;
+   color: black;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   margin: 50px 0;
+   cursor: pointer;
+ }
+
+ .logout {
+   width: 100px;
+   height: 40px;
+   line-height: 40px;
+   font-weight: bold;
+   cursor: pointer;
+   color: #000;
+   border: 1px solid #000;
+   margin: 0 50px;
+   text-align: center;
+   background-color: #ff3311;
+ }
